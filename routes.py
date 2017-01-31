@@ -21,10 +21,10 @@ TOOLS = "pan,wheel_zoom,box_zoom,reset"
 numlines = 2
 mypalette=Spectral11[0:numlines]
 
-print('inside app')
+
 @app.route("/")
 def index():
-  print('at /')
+  
   return render_template("index.html")
 
 @app.route("/about")
@@ -33,7 +33,7 @@ def about():
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
-	print('in signup')
+	
 	form = SignupForm()
 	if request.method == 'POST':
 		if form.validate() == False:
